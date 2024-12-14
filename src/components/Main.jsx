@@ -7,23 +7,20 @@ export default function Main() {
         <li key={index}>{ingredient}</li>
     ))
     
-    function handleSubmit(e){
-        e.preventDefault();
-        console.log("Form Submitted")
-        const formData = new FormData(e.currentTarget);
+    function addIngredient(formData){
         const newIngredient = formData.get("ingredient");
-        console.log(newIngredient);
-        setIngredients([...ingredients, newIngredient]);
+        setIngredients(prevIngredients => [...prevIngredients, newIngredient]);
     }
 
     return (
         <main>
-            <form onSubmit ={handleSubmit}className="add-ingredient-form">
+            <form action ={addIngredient}className="add-ingredient-form">
                 <input 
                     type="text"
                     placeholder="e.g. oregano"
                     aria-label="Add ingredient"
                     name = "ingredient"
+                    autoFocus = {true}
                 />
                 <button>Add ingredient</button>
                 </form>
