@@ -1,12 +1,13 @@
 import "./Main.css";
 import { useState } from "react";
 export default function Main() {
-    const [ingredients, setIngredients] = useState([]);
+    const [ingredients, setIngredients] = useState(["all the main spices", "tomato paste", "pasta", "ground beef", ]);
+    const [recipeShown, setRecipeShown] = useState(false);
     
     const ingredientsListItems = ingredients.map((ingredient, index) => (
         <li key={index}>{ingredient}</li>
     ))
-    const [recipeShown, setRecipeShown] = useState(false);
+
     
     function addIngredient(formData){
         const newIngredient = formData.get("ingredient");
