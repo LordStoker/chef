@@ -6,6 +6,7 @@ import ClaudeRecipe from "./ClaudeRecipe";
 export default function Main() {
     const [ingredients, setIngredients] = useState([]);
     const [recipeShown, setRecipeShown] = useState(false);
+
     
     const ingredientsListItems = ingredients.map((ingredient, index) => (
         <li key={index}>{ingredient}</li>
@@ -15,6 +16,10 @@ export default function Main() {
         setRecipeShown(prevRecipeShown => !prevRecipeShown
         );
     }
+
+
+
+    
 
     function addIngredient(formData){
         const newIngredient = formData.get("ingredient");
@@ -40,7 +45,6 @@ export default function Main() {
                 />
                 }
                 {recipeShown && <ClaudeRecipe />}
-
             
         </main>
     );
