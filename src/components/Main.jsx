@@ -35,9 +35,7 @@ export default function Main() {
                     recipeReady={setRecipeShown}
                 />
                 }
-                {recipeShown &&
-                    <ClaudeRecipe />
-                }
+                {recipeShown && <ClaudeRecipe />}
 
             
         </main>
