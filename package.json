@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^19.1.0-canary-4dff0e62-20241213",
     "react-dom": "^19.1.0-canary-4dff0e62-20241213",
+    "react-markdown": "^8.0.6",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },

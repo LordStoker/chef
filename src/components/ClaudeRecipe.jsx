@@ -1,11 +1,11 @@
-
+import ReactMarkdown from 'react-markdown'
 
 export default function ClaudeRecipe(props) {
     return(
         <section>
-            <article>
-                {props.recipe}
-            </article>
+            
+                <ReactMarkdown>{props.recipe}</ReactMarkdown>
+            
         </section>       
     )
 }
